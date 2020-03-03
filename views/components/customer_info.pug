@@ -2,4 +2,7 @@ mixin renderCustomerInfo(customers)
   ul(id="customers")
    each item in customers
     li
-      | #{item}
+      if typeof item == "object"
+        | #{JSON.stringify(item)}
+      else
+        | #{item}

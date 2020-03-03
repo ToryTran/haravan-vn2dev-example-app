@@ -1,6 +1,6 @@
 {
-  "app_id": "27a856995a9fc4e50c6a793258d726db",
-  "app_secret": "98d94d75bc0c411bb47d26ce48c822e0adc5cc4bec0720234cb326d6ec7877b4",
+  "app_id": "27a856995a93fc4e50c6a7933258d726db",
+  "app_secret": "98d94d75bc0c411b11b47d26ce48c8222e0adc5cc4bec0720234cb326d6ec7877b4",
   "scope_login": "openid profile email org userinfo",
   "scope": "openid profile email org userinfo com.write_products com.read_products  web.read_script_tags  grant_service",
   "login_callback_url": "http://3ffaae24.ngrok.io/install/login"

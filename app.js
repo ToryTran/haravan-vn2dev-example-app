@@ -29,3 +29,17 @@ app.get('/', (req, res) => {
   };
   res.render('index', data);
 });
+
+app.get('/install/login', (req, res) => {
+  const data = {
+    customers: ['Login', { name: 'Customer 2', text: '112434' }]
+  };
+  res.render('index', data);
+});
+
+app.get('/install/grandservice', (req, res) => {
+  const data = {
+    customers: ['grandservice', { name: 'Customer 2', text: '112434' }]
+  };
+  res.render('index', data);
+});
