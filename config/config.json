@@ -1,0 +1,7 @@
+{
+  "app_id": "0e86d3653f580f07358865a0b6cda6de",
+  "app_secret": "24302376155dd82a92f4d9d0b1d573c5a232d30ab5fe4a79069e4435bad7e200",
+  "scope_login": "openid profile email org userinfo",
+  "scope": "openid profile email org userinfo com.write_products com.read_products  web.read_script_tags  grant_service",
+  "login_callback_url": "http://localhost:3000/install/login"
+}

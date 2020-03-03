@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title
+      | Haravan Example App
+    link(rel='stylesheet', href='/css/style.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    include components/customer_info.pug
+    +renderCustomerInfo(customers)
+   
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+  script(src="/js/app.js")
