@@ -1,7 +1,17 @@
 {
+  "response_mode": "form_post",
+  "url_authorize": "https://accounts.haravan.com/connect/authorize",
+  "url_connect_token": "https://accounts.haravan.com/connect/token",
+  "grant_type": "authorization_code",
+  "nonce": "",
+  "response_type": "code id_token",
   "app_id": "27a856995a9fc4e50c6a793258d726db",
   "app_secret": "98d94d75bc0c411bb47d26ce48c822e0adc5cc4bec0720234cb326d6ec7877b4",
   "scope_login": "openid profile email org userinfo",
   "scope": "openid profile email org userinfo com.write_products com.read_products  web.read_script_tags  grant_service",
-  "login_callback_url": "http://3ffaae24.ngrok.io/install/login"
+  "login_callback_url": "http://3ffaae24.ngrok.io/install/login",
+  "webhook": {
+    "hrVerifyToken": "122ajfsfjsgaj24724721",
+    "subscribe": "https://webhook.haravan.com/api/subscribe"
+  }
 }

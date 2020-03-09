@@ -4,6 +4,6 @@ $(function() {
   })
     .done(function() {})
     .error(function() {
-      alert('Something wrong ');
+      // alert('Something wrong ');
     });
 });

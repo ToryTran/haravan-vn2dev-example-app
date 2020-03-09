@@ -1,7 +1,34 @@
 {
+  "response_mode": "form_post",
+  "url_authorize": "https://accounts.haravan.com/connect/authorize",
+  "url_connect_token": "https://accounts.haravan.com/connect/token",
+  "grant_type": "authorization_code",
+  "nonce": "asdfasdgd",
+  "response_type": "code id_token",
   "app_id": "27a856995a93fc4e50c6a7933258d726db",
   "app_secret": "98d94d75bc0c411b11b47d26ce48c8222e0adc5cc4bec0720234cb326d6ec7877b4",
   "scope_login": "openid profile email org userinfo",
   "scope": "openid profile email org userinfo com.write_products com.read_products  web.read_script_tags  grant_service",
-  "login_callback_url": "http://3ffaae24.ngrok.io/install/login"
+  "login_callback_url": "http://3ffaae24.ngrok.io/install/login",
+  "webhook": {
+    "hrVerifyToken": "122ajfsfjsgaj24724721",
+    "subscribe": "https://webhook.haravan.com/api/subscribe"
+  }
 }
+
+// response_mode: 'form_post',
+// 		url_authorize: 'https://accounts.haravan.com/connect/authorize',
+// 		url_connect_token: 'https://accounts.haravan.com/connect/token',
+// 		grant_type: 'authorization_code',
+// 		nonce: 'asdfasdgd',
+// 		response_type: 'code id_token',
+// 		app_id: '0e86d3653f580f07358865a0b6cda6de',
+// 		app_secret: '24302376155dd82a92f4d9d0b1d573c5a232d30ab5fe4a79069e4435bad7e200',
+// 		scope_login: 'openid profile email org userinfo',
+// 		scope: 'openid profile email org userinfo com.write_products com.read_products  web.read_script_tags  grant_service',
+// 		login_callback_url: 'http://localhost:3000/install/login',
+// 		install_callback_url: 'http://localhost:3000/install/grandservice',
+// 		webhook: {
+// 			hrVerifyToken: 'bOL3XFfZabhKe6dnJfCJuTAfi37dFchQ',
+// 			subscribe: 'https://webhook.haravan.com/api/subscribe'
+// 		},

@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const configData = require('./config/config.json');
+const config = require('./config/config.json');
 
 const http_port = 4000;
 
@@ -30,11 +30,32 @@ app.get('/', (req, res) => {
   res.render('index', data);
 });
 
+app.post('/install/login', (req, res) => {
+  console.log('Post LOgin request: ', req);
+});
+
 app.get('/install/login', (req, res) => {
-  const data = {
-    customers: ['Login', { name: 'Customer 2', text: '112434' }]
+  const orgid = '';
+  const loginParams = {
+    response_mode: config.response_mode,
+    response_type: config.response_type,
+    scope_login: config.scope_login,
+    client_id: config.app_id,
+    redirect_uri: config.login_callback_url,
+    nonce: ''
   };
-  res.render('index', data);
+  console.log(loginParams);
+  var queryString = Object.keys(loginParams)
+    .map(key => {
+      return (
+        encodeURIComponent(key) + '=' + encodeURIComponent(loginParams[key])
+      );
+    })
+    .join('&');
+  const redirectUrl = `${config.url_authorize}?${queryString}`;
+  console.log(redirectUrl);
+
+  res.redirect(redirectUrl);
 });
 
 app.get('/install/grandservice', (req, res) => {
@@ -42,4 +63,10 @@ app.get('/install/grandservice', (req, res) => {
     customers: ['grandservice', { name: 'Customer 2', text: '112434' }]
   };
   res.render('index', data);
+});
+
+app.get('/webhooks', (req, res) => {
+  // 122ajfsfjsgaj24724721
+  console.log(req.query);
+  res.status(200).send(req.query['hub.challenge']);
 });
